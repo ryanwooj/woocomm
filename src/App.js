@@ -1,12 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Homepage from './pages/homepage/homepage.component';
+
+const HarsPage = () => (
+  <div>
+    <h1>Hats paeg</h1>
+  </div>
+);
 
 function App() {
   return (
     <div className='App'>
-      <Homepage />
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+      </Switch>
     </div>
   );
 }
